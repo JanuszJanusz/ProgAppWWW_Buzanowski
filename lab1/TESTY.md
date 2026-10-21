@@ -30,7 +30,11 @@ wpisanie za małej ilości znaków powoduje prośbe o użycie przynajmniej 10 zn
 
 poprawny zestaw
 
-kontakt.html?email=example%40mail.com&produkt=1&ilosc=2&wiadomosc=Produkt+ma+defekt
+kontakt.html?
+email=example%40mail.com
+produkt=1
+ilosc=2
+wiadomosc=Produkt+ma+defekt
 
 
 usunięcie name z pola e-mail powoduje że wpisany mail nie wyświetla się w url po wysłaniu formularza
