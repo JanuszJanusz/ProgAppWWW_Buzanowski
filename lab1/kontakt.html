@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Sklepik Komputerowy</title>
+</head>
+<body>
+    <header>
+        <h1>Sklepik Komputerowy</h1>
+    </header>
+    <nav class="menu">
+        <a href="index.html">Katalog</a>
+        <a href="produkt.html">Produkt</a>
+        <a href="kontakt.html" aria-current="page">Kontakt</a>
+    </nav>
+    <main class="kontener">
+        <form action="kontakt.html" method="get">
+            <label for="mail">E-mail</label> <input type="email" name="email" id="mail" required placeholder="example@mail.com (wymagane)">
+            <label for="prod">Produkt</label> <select name="produkt" id="prod" required>
+                <option value="">Wybierz produkt</option>
+                <option value="RAM">Kości RAM</option>
+                <option value="Karta_Graficzna">Karta Graficzna</option>
+                <option value="Dysk">Dysk SSD M.2</option>
+            </select>
+            <label for="ile">Ilość</label> <input type="number" name="ilosc" id="ile" required min="1" max="5" step="1" placeholder="od 1 do 5">
+            <label for="wiad">Wiadomość</label> <textarea name="wiadomosc" id="wiad" required minlength="10" maxlength="500" placeholder="od 10 do 500 znaków"></textarea>
+            <button class="przycisk" type="submit">Sprawdź zapytanie</button>
+        </form>
+    </main>
+    <footer>
+        <i>Formularz demonstracyjny. Dane pojawią się w adresie strony; zapytanie nie zostanie zapisane ani wysłane e-mailem.</i>
+        <p>Wykonał 181078, 100% Clanker Free</p>
+    </footer>
+</body>
+</html>
