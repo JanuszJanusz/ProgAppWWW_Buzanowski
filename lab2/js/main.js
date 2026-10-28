@@ -89,9 +89,9 @@ if (filtr != null) {
 }
 
 const produkty_i_ceny = [
-    { id: "RAM", nazwa: "Kości RAM", cena: 90000},
-    { id: "Karta_Graficzna", nazwa: "Karta Graficzna", cena: 439900},
-    { id: "Dysk", nazwa: "Dysk SSD M.2", cena: 65900}
+    { id: "RAM", nazwa: "Kości RAM", cenaGrosze: 90000},
+    { id: "Karta_Graficzna", nazwa: "Karta Graficzna", cenaGrosze: 439900},
+    { id: "Dysk", nazwa: "Dysk SSD M.2", cenaGrosze: 65900}
 ];
 const pln = new Intl.NumberFormat("pl-PL", {style:"currency", currency:"PLN"});
 grosze_to_zloty = (grosze) => {
@@ -145,7 +145,7 @@ if (formularz != null) {
             wartosc.innerHTML = 'Podaj poprawną ilość aby zobaczyć wartosć';
             return;
         }
-        wartosc.innerHTML = `Wartość zapytania: ${grosze_to_zloty(oblicz(produkt.cena, walidacja.wartosc))}`;
+        wartosc.innerHTML = `Wartość zapytania: ${grosze_to_zloty(oblicz(produkt.cenaGrosze, walidacja.wartosc))}`;
     }
     select_product.addEventListener("change", () => {
         wartosc_zapytki();
@@ -205,7 +205,7 @@ if (formularz != null) {
         }
 
         const ile_prod = walid_ile.wartosc;
-        const grosze = oblicz(produkt.cena, ile_prod);
+        const grosze = oblicz(produkt.cenaGrosze, ile_prod);
         const w_pln = grosze_to_zloty(grosze);
 
         podglad.innerHTML = '';
