@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl" data-theme="light" id="html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Sklepik Komputerowy</title>
+    <script src="js/main.js" defer></script>
+    <script src="vendor/jquery-4.0.0.min.js" defer></script>
+    <script src="js/lab3.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Sklepik Komputerowy</h1>
+        <button id="theme_btn" type="button" aria-pressed="false">Tryb Ciemny</button>
+    </header>
+    <nav class="menu">
+        <a href="index.html" aria-current="page">Katalog</a>
+        <a href="produkt.html">Produkt</a>
+        <a href="kontakt.html">Kontakt</a>
+    </nav>
+    <main class="kontener">
+        <label for="filtr">Wyszukaj produkt:</label><input placeholder="Wpisz nazwę produktu..." type="search" name="filtr" id="filtr">
+        <p>Ilość dopasowań: <strong aria-live="polite" id="ile_wyn">3</strong></p>
+        <div class="grid">
+            <article class="karta">
+                <h2>Zestaw RAM 2x 8GB DDR4</h2>
+                <a href="produkt.html"><img src="img/pr_2021_7_7_14_16_12_451_02.png" alt="dwie kości ram"></a>
+                <p>Dwie kości RAM DDR4, taktowanie 3200 MHz, latency CL 16</p>
+                <p class="cena">900.00zł</p>
+            </article>
+            <article class="karta">
+                <h2>Karta Graficzna NVidia</h2>
+                <img src="img/43929.png" alt="Karta Graficzna NVIDIA">
+                <p>Karta Graficzna GeForce RTX 5070 OC 12GB GDDR7</p>
+                <p class="cena">4399.00zł</p>
+            </article>
+            <article class="karta">
+                <h2>Dysk M.2 PCIe 1TB</h2>
+                <img src="img/pr_2024_8_7_8_25_14_554_02.png" alt="Dysk SSD M.2">
+                <p>1TB dysk M.2 PCIe Gen4 x4 NVMe NV3</p>
+                <p class="cena">659.00zł</p>
+            </article>
+        </div>
+    </main>
+    <section id="piaskownica">
+        <button type="button" class="animButton" id="animButton1" aria-pressed="false">A</button>
+        <button type="button" class="animButton" id="animButton2" aria-pressed="false">B</button>
+        <button type="button" class="animButton" id="animButton3" aria-pressed="false">C
+            <p id="status" role="status"></p>
+        </button>
+        <button class="animButton" id="animResetAC">Resetuj A i C</button>
+        <button class="animButton" id="srvTest">Sprawdź serwer</button>
+    </section>
+    <footer>
+        <p id="srvResponse" role="status"></p>
+        Wykonał 181078, 100% Clanker Free
+        <p id="czas"></p>
+        <button id="zegarStart">Start zegara</button>
+        <button id="zegarStop">Stop zegara</button>
+    </footer>
+</body>
+</html>
