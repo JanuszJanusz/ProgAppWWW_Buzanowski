@@ -129,6 +129,6 @@ $("#srvTest").on("click", function() {
         $("#srvResponse").text(msg);
     }).always(function() {
         $("#srvTest").prop('disabled', false).text("Sprawdź serwer");
-    })
+    });
 
 });
